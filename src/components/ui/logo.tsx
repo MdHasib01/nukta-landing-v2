@@ -11,16 +11,16 @@ export function Logo({ className }: LogoProps) {
   const [error, setError] = useState(false);
 
   return (
-    <div className={cn("flex items-center", className)}>
+    <div className={cn("flex items-center h-full", className)}>
       {!error ? (
         <img
           src={assets.logo}
           alt={`${business.businessName} Logo`}
-          className="max-h-full max-w-full object-contain"
+          className="h-full w-auto object-contain rounded-xl"
           onError={() => setError(true)}
         />
       ) : (
-        <span className="font-serif font-bold text-xl tracking-wide text-primary-deep">
+        <span className="font-serif font-bold text-2xl md:text-3xl tracking-wide text-primary-deep">
           {business.businessName.toUpperCase()}
         </span>
       )}

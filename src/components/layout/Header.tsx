@@ -82,13 +82,13 @@ export function Header() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled || isMobileMenuOpen || !isHome
-          ? 'h-16 bg-white/95 backdrop-blur-md border-b border-bg-ivory py-0 flex items-center shadow-sm'
+          ? 'h-20 md:h-24 bg-white/95 backdrop-blur-md border-b border-bg-ivory py-2 flex items-center shadow-sm'
           : 'bg-transparent py-4 md:py-6'
       )}
     >
       <div className="container mx-auto px-4 md:px-6 xl:px-8 w-full max-w-[1200px]">
         <div className="flex items-center justify-between">
-          <Link to="/" className="z-50 relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg h-8 md:h-10">
+          <Link to="/" className="z-50 relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg h-14 md:h-16 lg:h-20 py-1">
             <Logo className="h-full" />
           </Link>
 
