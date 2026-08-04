@@ -1,0 +1,6 @@
+{
+  "name": "Nukta",
+  "description": "Nukta is a one-stop premium business service and operational growth partner. Founder vision দিবে, operation সামলাবে Nukta.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

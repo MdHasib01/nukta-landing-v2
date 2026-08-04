@@ -1,0 +1,18 @@
+export const env = {
+  siteUrl: (import.meta as any).env.VITE_SITE_URL || 'https://nukta.com',
+  apiUrl: (import.meta as any).env.VITE_API_URL || '',
+  leadWebhookUrl: (import.meta as any).env.VITE_LEAD_WEBHOOK_URL || '',
+  googleSheetEndpoint: (import.meta as any).env.VITE_GOOGLE_SHEET_ENDPOINT || '',
+  contactEmail: (import.meta as any).env.VITE_CONTACT_EMAIL || '',
+  whatsappNumber: (import.meta as any).env.VITE_WHATSAPP_NUMBER || '',
+  facebookPageUrl: (import.meta as any).env.VITE_FACEBOOK_PAGE_URL || '',
+  messengerUrl: (import.meta as any).env.VITE_MESSENGER_URL || '',
+  linkedinPartnerId: (import.meta as any).env.VITE_LINKEDIN_PARTNER_ID || '',
+  googleMapsUrl: (import.meta as any).env.VITE_GOOGLE_MAPS_URL || '',
+  ga4Id: (import.meta as any).env.VITE_GA4_ID || '',
+  metaPixelId: (import.meta as any).env.VITE_META_PIXEL_ID || '',
+  enableAnalytics: (import.meta as any).env.VITE_ENABLE_ANALYTICS === 'true',
+  enableRemoteLeadSubmission: (import.meta as any).env.VITE_ENABLE_REMOTE_LEAD_SUBMISSION === 'true',
+  isProduction: (import.meta as any).env.PROD,
+  isDevelopment: (import.meta as any).env.DEV,
+};
