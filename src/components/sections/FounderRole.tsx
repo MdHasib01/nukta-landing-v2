@@ -1,3 +1,5 @@
+'use client';
+
 import { Target, Layers } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Section } from '@/components/ui/section';

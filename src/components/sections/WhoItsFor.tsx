@@ -1,3 +1,5 @@
+'use client';
+
 import { Lightbulb, TrendingUp, Clock, Settings, ArrowRight } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { Section } from '@/components/ui/section';

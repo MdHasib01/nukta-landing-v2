@@ -1,0 +1,59 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-4772d34723bd25e0.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-3d881dfa8c72bc56.js",
+      "static/chunks/main-app-cb073028aadebafd.js",
+      "static/chunks/app/_not-found/page-5d0ed0bc6736099e.js"
+    ],
+    "/not-found": [
+      "static/chunks/webpack-4772d34723bd25e0.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-3d881dfa8c72bc56.js",
+      "static/chunks/main-app-cb073028aadebafd.js",
+      "static/chunks/909-a5da60d248a1c133.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/app/not-found-282bb3b0d6e41bdb.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-4772d34723bd25e0.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-3d881dfa8c72bc56.js",
+      "static/chunks/main-app-cb073028aadebafd.js",
+      "static/css/639ce13512a13a70.css",
+      "static/chunks/909-a5da60d248a1c133.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/app/layout-48a5aa6ab2f4f446.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-4772d34723bd25e0.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-3d881dfa8c72bc56.js",
+      "static/chunks/main-app-cb073028aadebafd.js",
+      "static/chunks/909-a5da60d248a1c133.js",
+      "static/chunks/app/page-c45f67662de00ee5.js"
+    ],
+    "/disclaimer/page": [
+      "static/chunks/webpack-4772d34723bd25e0.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-3d881dfa8c72bc56.js",
+      "static/chunks/main-app-cb073028aadebafd.js",
+      "static/chunks/app/disclaimer/page-5d0ed0bc6736099e.js"
+    ],
+    "/privacy-policy/page": [
+      "static/chunks/webpack-4772d34723bd25e0.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-3d881dfa8c72bc56.js",
+      "static/chunks/main-app-cb073028aadebafd.js",
+      "static/chunks/app/privacy-policy/page-5d0ed0bc6736099e.js"
+    ],
+    "/terms/page": [
+      "static/chunks/webpack-4772d34723bd25e0.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-3d881dfa8c72bc56.js",
+      "static/chunks/main-app-cb073028aadebafd.js",
+      "static/chunks/app/terms/page-5d0ed0bc6736099e.js"
+    ]
+  }
+}

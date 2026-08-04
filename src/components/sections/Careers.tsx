@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { MapPin, BriefcaseIcon, DollarSign, Mail, ArrowRight, X, Users } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/section-heading';

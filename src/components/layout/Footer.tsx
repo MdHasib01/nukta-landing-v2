@@ -1,13 +1,15 @@
+'use client';
+
 import { Mail, MapPin, Facebook, MessageCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { business } from '@/config/business';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Logo } from '@/components/ui/logo';
 
 export function Footer() {
-  const location = useLocation();
-  const isHome = location.pathname === '/';
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   const scrollTo = (id: string) => {
     if (isHome) {
@@ -23,7 +25,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
           {/* Brand Col */}
           <div className="col-span-2 lg:col-span-2">
-            <Link to="/" className="inline-block mb-6 h-10 filter brightness-0 invert">
+            <Link href="/" className="inline-block mb-6 h-10 filter brightness-0 invert">
               <Logo className="h-full justify-start" />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-8">
@@ -108,9 +110,9 @@ export function Footer() {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
           <p>© {new Date().getFullYear()} {business.businessName}. All rights reserved.</p>
           <div className="flex gap-4">
-            <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-            <Link to="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>
           </div>
         </div>
       </Container>

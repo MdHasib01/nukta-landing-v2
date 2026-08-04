@@ -1,17 +1,20 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Logo } from '@/components/ui/logo';
 import { business } from '@/config/business';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const location = useLocation();
-  const isHome = location.pathname === '/';
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,7 +91,7 @@ export function Header() {
     >
       <div className="container mx-auto px-4 md:px-6 xl:px-8 w-full max-w-[1200px]">
         <div className="flex items-center justify-between">
-          <Link to="/" className="z-50 relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg h-14 md:h-16 lg:h-20 py-1">
+          <Link href="/" className="z-50 relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg h-14 md:h-16 lg:h-20 py-1">
             <Logo className="h-full" />
           </Link>
 

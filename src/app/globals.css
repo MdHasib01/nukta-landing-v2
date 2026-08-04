@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0B6B4B;
+  --color-primary-deep: #064E3B;
+  --color-accent: #D4A62A;
+  --color-accent-metallic: #B8860B;
+  --color-bg-warm: #F8F8F6;
+  --color-bg-ivory: #EFECE6;
+  --color-sage: #DDEEE5;
+  --color-charcoal: #111111;
+  --color-muted-text: #5F665F;
+  --color-border: rgba(11, 107, 75, 0.14);
+
+  --font-sans: "Inter", "Hind Siliguri", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-bengali: "Hind Siliguri", sans-serif;
+
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-button: 0 4px 14px 0 rgba(11, 107, 75, 0.2);
+
+  --radius-card: 20px;
+  --radius-button: 12px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans bg-bg-warm text-charcoal antialiased;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

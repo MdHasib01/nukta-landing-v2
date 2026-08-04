@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { ArrowRight, Image as ImageIcon, X, FileSearch } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/section-heading';
