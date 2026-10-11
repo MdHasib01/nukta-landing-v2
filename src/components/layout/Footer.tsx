@@ -25,7 +25,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
           {/* Brand Col */}
           <div className="col-span-2 lg:col-span-2">
-            <Link href="/" className="inline-block mb-6 h-10 filter brightness-0 invert">
+            <Link href="/" className="inline-block mb-6 h-20 md:h-24 bg-white rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
               <Logo className="h-full justify-start" />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-8">
