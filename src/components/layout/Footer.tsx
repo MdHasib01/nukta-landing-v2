@@ -1,8 +1,8 @@
 'use client';
 
-import { Mail, MapPin, Facebook, MessageCircle } from 'lucide-react';
+import { Mail, MapPin, Facebook, Linkedin, MessageCircle } from 'lucide-react';
 import { Container } from '@/components/ui/container';
-import { business } from '@/config/business';
+import { business, foundingYear } from '@/config/business';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Logo } from '@/components/ui/logo';
@@ -32,13 +32,18 @@ export function Footer() {
               {business.businessName} — {business.tagline}
             </p>
             <div className="flex gap-4">
+              {business.linkedinUrl && (
+                <a href={business.linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label="Nukta Technologies on LinkedIn" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              )}
               {business.facebookUrl && (
-                <a href={business.facebookUrl} className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                <a href={business.facebookUrl} target="_blank" rel="noopener noreferrer" aria-label="Nukta Technologies on Facebook" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
                   <Facebook className="w-5 h-5" />
                 </a>
               )}
               {business.messengerUrl && (
-                <a href={business.messengerUrl} className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                <a href={business.messengerUrl} target="_blank" rel="noopener noreferrer" aria-label="Message Nukta on Messenger" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
                   <MessageCircle className="w-5 h-5" />
                 </a>
               )}
@@ -63,7 +68,7 @@ export function Footer() {
             <h4 className="text-lg font-bold mb-6 font-serif">Company</h4>
             <ul className="space-y-3">
               <li>
-                <button onClick={() => scrollTo('home')} className="text-white/70 hover:text-white transition-colors text-sm text-left">About Nukta</button>
+                <button onClick={() => scrollTo('about')} className="text-white/70 hover:text-white transition-colors text-sm text-left">About Nukta</button>
               </li>
               <li>
                 <button onClick={() => scrollTo('how-we-work')} className="text-white/70 hover:text-white transition-colors text-sm text-left">How We Work</button>
@@ -108,7 +113,7 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
-          <p>© {new Date().getFullYear()} {business.businessName}. All rights reserved.</p>
+          <p>© {foundingYear}–{new Date().getFullYear()} {business.legalName}. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>

@@ -7,7 +7,7 @@ const getEnv = (viteKey: string, nextKey: string): string => {
 };
 
 export const env = {
-  siteUrl: getEnv('VITE_SITE_URL', 'NEXT_PUBLIC_SITE_URL') || 'https://nukta.com',
+  siteUrl: getEnv('VITE_SITE_URL', 'NEXT_PUBLIC_SITE_URL') || 'https://nuktatechnologies.com',
   apiUrl: getEnv('VITE_API_URL', 'NEXT_PUBLIC_API_URL'),
   leadWebhookUrl: getEnv('VITE_LEAD_WEBHOOK_URL', 'NEXT_PUBLIC_LEAD_WEBHOOK_URL'),
   googleSheetEndpoint: getEnv('VITE_GOOGLE_SHEET_ENDPOINT', 'NEXT_PUBLIC_GOOGLE_SHEET_ENDPOINT'),

@@ -99,7 +99,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "G:\\Nukta Technologies\\nukta",
+    "outputFileTracingRoot": "D:\\04. Nukta Technology\\nukta-landing-v2",
     "experimental": {
       "useSkewCookie": false,
       "cacheLife": {
@@ -288,10 +288,10 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
     "turbopack": {
-      "root": "G:\\Nukta Technologies\\nukta"
+      "root": "D:\\04. Nukta Technology\\nukta-landing-v2"
     }
   },
-  "appDir": "G:\\Nukta Technologies\\nukta",
+  "appDir": "D:\\04. Nukta Technology\\nukta-landing-v2",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ArrowRight, Image as ImageIcon, X, FileSearch } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Facebook, Image as ImageIcon, X } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { Section } from '@/components/ui/section';
 import { Container } from '@/components/ui/container';
@@ -20,6 +20,18 @@ interface Project {
   status: 'completed' | 'ongoing';
   isPublished: boolean;
 }
+
+interface Brand {
+  name: string;
+  desc: string;
+  logo: string | null;
+  facebookUrl: string;
+}
+
+// Nukta's own brands — shown until verified case studies are published.
+// The grid stays hidden while this list is empty. Example entry:
+// { name: "Brand Name", desc: "One-line description", logo: null, facebookUrl: "https://www.facebook.com/brandpage" },
+const brands: Brand[] = [];
 
 export function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -118,15 +130,38 @@ export function Portfolio() {
               </div>
             ))}
           </div>
-        ) : (
-          <div className="mt-12 max-w-2xl mx-auto bg-bg-warm border border-sage/50 rounded-[32px] p-10 md:p-16 text-center">
-            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-sage/30">
-              <FileSearch className="w-8 h-8 text-primary/60" />
-            </div>
-            <h3 className="text-2xl font-serif font-bold text-charcoal mb-4">Verified case studies প্রস্তুত করা হচ্ছে</h3>
-            <p className="text-gray-600 font-medium leading-relaxed font-bengali">
-              Nukta-এর real project information, approved visuals এবং verified results যুক্ত হওয়ার পর এখানে প্রকাশ করা হবে।
-            </p>
+        ) : brands.length > 0 && (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto mt-8 md:mt-12">
+            {brands.map((brand, index) => (
+              <div
+                key={brand.name}
+                className={`bg-bg-warm p-6 md:p-8 rounded-[24px] shadow-sm hover:shadow-card transition-shadow border-l-4 flex flex-col ${index % 2 === 0 ? 'border-primary' : 'border-accent'}`}
+              >
+                <div className="w-16 h-16 rounded-2xl bg-white border border-sage/50 flex items-center justify-center overflow-hidden mb-5">
+                  {brand.logo ? (
+                    <img src={brand.logo} alt={`${brand.name} logo`} loading="lazy" decoding="async" className="w-full h-full object-contain p-2" />
+                  ) : (
+                    <span className="text-2xl font-serif font-bold text-primary" aria-hidden="true">{brand.name.charAt(0)}</span>
+                  )}
+                </div>
+                <h3 className="text-xl font-bold text-charcoal mb-2">
+                  {brand.name}
+                </h3>
+                <p className="text-gray-500 text-sm mb-6 flex-1 font-medium font-bengali leading-relaxed">
+                  {brand.desc}
+                </p>
+                <a
+                  href={brand.facebookUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center self-start text-primary font-bold text-sm hover:text-primary-deep transition-colors focus:outline-none focus-visible:underline"
+                >
+                  <Facebook className="w-4 h-4 mr-2" />
+                  Facebook Page দেখুন
+                  <ArrowUpRight className="w-4 h-4 ml-1" />
+                </a>
+              </div>
+            ))}
           </div>
         )}
       </Container>

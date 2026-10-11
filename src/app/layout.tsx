@@ -6,7 +6,7 @@ import { business } from '@/config/business';
 
 export const metadata: Metadata = {
   title: `${business.businessName} — ${business.tagline}`,
-  description: 'Production, branding, marketing, technology, customer support, and business operations—all connected in a single system.',
+  description: 'Nukta Technologies — a Jashore-based venture studio running consumer brands and building AI-powered business tools.',
   icons: {
     icon: '/favicon.jpg',
   },

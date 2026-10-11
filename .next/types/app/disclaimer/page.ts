@@ -1,4 +1,4 @@
-// File: G:\Nukta Technologies\nukta\src\app\disclaimer\page.tsx
+// File: D:\04. Nukta Technology\nukta-landing-v2\src\app\disclaimer\page.tsx
 import * as entry from '../../../../src/app/disclaimer/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -9,6 +9,7 @@ import { Container } from '@/components/ui/container';
 import { leadService } from '@/services/lead.service';
 import { Analytics } from '@/utils/analytics';
 import { ErrorHandler } from '@/utils/error';
+import { business } from '@/config/business';
 
 export function LeadForm() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -238,6 +239,13 @@ export function LeadForm() {
               </form>
             )}
           </div>
+
+          <p className="mt-6 text-center text-sm text-gray-600 font-bengali font-medium">
+            অথবা সরাসরি Email করুন:{' '}
+            <a href={`mailto:${business.email}`} className="text-primary font-bold hover:text-primary-deep transition-colors break-all">
+              {business.email}
+            </a>
+          </p>
         </div>
       </Container>
     </Section>

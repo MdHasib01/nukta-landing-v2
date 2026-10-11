@@ -65,6 +65,7 @@ export function Header() {
   const navLinks = [
     { name: 'Home', href: '/#home', id: 'home' },
     { name: 'Services', href: '/#services', id: 'services' },
+    { name: 'Products', href: '/#products', id: 'products' },
     { name: 'How We Work', href: '/#how-we-work', id: 'how-we-work' },
     { name: 'Why Nukta', href: '/#why-nukta', id: 'why-nukta' },
     { name: 'Portfolio', href: '/#brands', id: 'brands' },
@@ -85,8 +86,10 @@ export function Header() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled || isMobileMenuOpen || !isHome
-          ? 'h-20 md:h-24 bg-white/95 backdrop-blur-md border-b border-bg-ivory py-2 flex items-center shadow-sm'
-          : 'bg-transparent py-4 md:py-6'
+          ? 'h-20 md:h-24 bg-white/95 border-b border-bg-ivory py-2 flex items-center shadow-sm'
+          : 'bg-transparent py-4 md:py-6',
+        // backdrop-filter makes the header the containing block for the fixed mobile menu, clipping it to header height
+        (isScrolled || !isHome) && !isMobileMenuOpen && 'backdrop-blur-md'
       )}
     >
       <div className="container mx-auto px-4 md:px-6 xl:px-8 w-full max-w-[1200px]">
@@ -96,8 +99,8 @@ export function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
-            <ul className="flex items-center gap-6 text-sm font-medium">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
+            <ul className="flex items-center gap-4 xl:gap-6 text-sm font-medium whitespace-nowrap">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   {isHome ? (

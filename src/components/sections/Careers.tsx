@@ -148,7 +148,7 @@ export function Careers() {
           <p className="text-gray-500 mb-6 font-bengali">
             "CV শুধুমাত্র Email-এ গ্রহণ করা হবে।"
           </p>
-          <a href={`mailto:${business.email}`} className="inline-flex items-center justify-center bg-bg-ivory hover:bg-sage/40 text-primary font-bold px-6 py-3 rounded-xl transition-colors">
+          <a href={`mailto:${business.email}`} className="inline-flex items-center justify-center max-w-full break-all bg-bg-ivory hover:bg-sage/40 text-primary font-bold text-sm sm:text-base px-4 sm:px-6 py-3 rounded-xl transition-colors">
             {business.email}
           </a>
         </div>
