@@ -1,15 +1,28 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Menu, X, ArrowRight } from 'lucide-react';
+import { buttonClasses } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Logo } from '@/components/ui/logo';
 import { business } from '@/config/business';
+import { hasPortfolioContent } from '@/config/portfolio';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from '@/components/ui/language-switcher';
+
+const navLinks = [
+  { key: 'services' as const, href: '/#services', id: 'services' },
+  { key: 'products' as const, href: '/#products', id: 'products' },
+  { key: 'howWeWork' as const, href: '/#how-we-work', id: 'how-we-work' },
+  { key: 'whyNukta' as const, href: '/#why-nukta', id: 'why-nukta' },
+  ...(hasPortfolioContent ? [{ key: 'portfolio' as const, href: '/#brands', id: 'brands' }] : []),
+  { key: 'careers' as const, href: '/#careers', id: 'careers' },
+];
 
 export function Header() {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -17,10 +30,9 @@ export function Header() {
   const isHome = pathname === '/';
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > 12);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -30,9 +42,7 @@ export function Header() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
         });
       },
       { rootMargin: '-20% 0px -80% 0px' }
@@ -40,180 +50,143 @@ export function Header() {
 
     const sections = document.querySelectorAll('section[id]');
     sections.forEach((section) => observer.observe(section));
-
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-    };
+    return () => observer.disconnect();
   }, [isHome]);
 
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-      const handleEscape = (e: KeyboardEvent) => {
-        if (e.key === 'Escape') setIsMobileMenuOpen(false);
-      };
-      document.addEventListener('keydown', handleEscape);
-      return () => {
-        document.body.style.overflow = '';
-        document.removeEventListener('keydown', handleEscape);
-      };
-    } else {
+    if (!isMobileMenuOpen) return;
+    document.body.style.overflow = 'hidden';
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsMobileMenuOpen(false);
+    };
+    document.addEventListener('keydown', handleEscape);
+    return () => {
       document.body.style.overflow = '';
-    }
+      document.removeEventListener('keydown', handleEscape);
+    };
   }, [isMobileMenuOpen]);
 
-  const navLinks = [
-    { name: 'Home', href: '/#home', id: 'home' },
-    { name: 'Services', href: '/#services', id: 'services' },
-    { name: 'Products', href: '/#products', id: 'products' },
-    { name: 'How We Work', href: '/#how-we-work', id: 'how-we-work' },
-    { name: 'Why Nukta', href: '/#why-nukta', id: 'why-nukta' },
-    { name: 'Portfolio', href: '/#brands', id: 'brands' },
-    { name: 'Careers', href: '/#careers', id: 'careers' },
-    { name: 'Contact', href: '/#contact', id: 'contact' },
-  ];
-
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     setIsMobileMenuOpen(false);
     if (isHome && href.startsWith('/#')) {
-      const id = href.substring(2);
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      e.preventDefault();
+      document.getElementById(href.substring(2))?.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const solid = isScrolled || isMobileMenuOpen || !isHome;
 
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled || isMobileMenuOpen || !isHome
-          ? 'h-20 md:h-24 bg-white/95 border-b border-bg-ivory py-2 flex items-center shadow-sm'
-          : 'bg-transparent py-4 md:py-6',
+        'fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color,box-shadow] duration-300 border-b',
+        solid ? 'bg-white/85 border-line/80 shadow-[0_1px_0_rgba(10,31,23,0.02)]' : 'bg-transparent border-transparent',
         // backdrop-filter makes the header the containing block for the fixed mobile menu, clipping it to header height
-        (isScrolled || !isHome) && !isMobileMenuOpen && 'backdrop-blur-md'
+        solid && !isMobileMenuOpen && 'backdrop-blur-xl backdrop-saturate-150'
       )}
     >
-      <div className="container mx-auto px-4 md:px-6 xl:px-8 w-full max-w-[1200px]">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="z-50 relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg h-14 md:h-16 lg:h-20 py-1">
-            <Logo className="h-full" />
+      <div className="mx-auto w-full max-w-[1200px] px-5 md:px-6">
+        <div className="flex h-16 md:h-[72px] items-center justify-between gap-6">
+          <Link
+            href="/"
+            onClick={(e) => handleNavClick(e, '/#home')}
+            className="relative z-50 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+          >
+            <Logo />
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
-            <ul className="flex items-center gap-4 xl:gap-6 text-sm font-medium whitespace-nowrap">
-              {navLinks.map((link) => (
-                <li key={link.name}>
-                  {isHome ? (
+          <nav aria-label={t('header.primaryNav')} className="hidden lg:flex items-center gap-6">
+            <ul className="flex items-center gap-1 text-sm font-medium">
+              {navLinks.map((link) => {
+                const active = isHome && activeSection === link.id;
+                return (
+                  <li key={link.id}>
                     <a
                       href={link.href}
-                      onClick={(e) => {
-                        if (link.href.startsWith('/#')) {
-                          e.preventDefault();
-                          handleNavClick(link.href);
-                        }
-                      }}
+                      onClick={(e) => handleNavClick(e, link.href)}
+                      aria-current={active ? 'true' : undefined}
                       className={cn(
-                        'transition-colors py-2 relative',
-                        activeSection === link.id ? 'text-charcoal' : 'text-gray-500 hover:text-primary'
+                        'rounded-full px-3.5 py-2 transition-colors',
+                        active ? 'bg-primary-soft text-primary-deep' : 'text-body hover:text-ink hover:bg-ink/[0.04]'
                       )}
                     >
-                      {link.name}
-                      {activeSection === link.id && (
-                        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary rounded-t-full" />
-                      )}
+                      {t(`header.nav.${link.key}`)}
                     </a>
-                  ) : (
-                    <a
-                      href={link.href}
-                      className="text-gray-500 hover:text-primary transition-colors py-2 relative"
-                    >
-                      {link.name}
-                    </a>
-                  )}
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ul>
-            <Button size="sm" onClick={() => {
-              if (isHome) {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              } else {
-                window.location.href = '/#contact';
-              }
-            }}>
-              আপনার Business নিয়ে কথা বলুন
-            </Button>
+            <LanguageSwitcher />
+            <a
+              href="/#contact"
+              onClick={(e) => handleNavClick(e, '/#contact')}
+              className={buttonClasses({ size: 'sm', className: 'font-bengali' })}
+            >
+              <span className="xl:hidden">{t('common.ctaTalkShort')}</span>
+              <span className="hidden xl:inline">{t('common.ctaTalkBusiness')}</span>
+              <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5" />
+            </a>
           </nav>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile: language toggle + menu toggle */}
+          <div className="lg:hidden relative z-50 flex items-center gap-2">
+          <LanguageSwitcher />
           <button
-            className="lg:hidden p-2 text-charcoal z-50 relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
+            type="button"
+            className="-mr-2 rounded-full p-2.5 text-ink hover:bg-ink/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-expanded={isMobileMenuOpen}
-            aria-label="Toggle navigation menu"
+            aria-controls="mobile-menu"
+            aria-label={t('header.toggleMenu')}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile Nav */}
-      <div 
+      <div
+        id="mobile-menu"
         className={cn(
-          "lg:hidden fixed inset-0 bg-white z-40 transition-transform duration-300 ease-in-out transform flex flex-col pt-20",
-          isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
+          'lg:hidden fixed inset-0 z-40 flex flex-col bg-white pt-16 transition-[opacity,transform] duration-300 ease-out',
+          isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 -translate-y-2'
         )}
+        aria-hidden={!isMobileMenuOpen}
       >
-        <div className="container mx-auto px-4 flex flex-col h-full overflow-y-auto pb-6 custom-scrollbar">
-          <ul className="flex flex-col gap-2 mt-4">
+        <div className="mx-auto flex h-full w-full flex-col overflow-y-auto px-5 pb-8 custom-scrollbar">
+          <ul className="mt-6 flex flex-col divide-y divide-line border-y border-line">
             {navLinks.map((link) => (
-              <li key={link.name}>
-                {isHome ? (
-                  <a
-                    href={link.href}
-                    onClick={(e) => {
-                      if (link.href.startsWith('/#')) {
-                        e.preventDefault();
-                        handleNavClick(link.href);
-                      }
-                    }}
-                    className={cn(
-                      "block px-4 py-3 rounded-xl font-medium text-lg transition-colors",
-                      activeSection === link.id ? "bg-sage text-primary font-bold" : "text-charcoal hover:bg-bg-warm"
-                    )}
-                  >
-                    {link.name}
-                  </a>
-                ) : (
-                  <a
-                    href={link.href}
-                    className="block px-4 py-3 rounded-xl font-medium text-lg text-charcoal hover:bg-bg-warm transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                )}
+              <li key={link.id}>
+                <a
+                  href={link.href}
+                  tabIndex={isMobileMenuOpen ? 0 : -1}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className={cn(
+                    'flex items-center justify-between py-4 font-display text-xl font-semibold transition-colors',
+                    isHome && activeSection === link.id ? 'text-primary' : 'text-ink hover:text-primary'
+                  )}
+                >
+                  {t(`header.nav.${link.key}`)}
+                  <ArrowRight className="h-5 w-5 text-muted-text" />
+                </a>
               </li>
             ))}
           </ul>
-          
-          <div className="mt-auto pt-8">
-            <Button 
-              className="w-full" 
-              size="lg"
-              onClick={() => {
-                setIsMobileMenuOpen(false);
-                if (isHome) {
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  window.location.href = '/#contact';
-                }
-              }}
+
+          <div className="mt-auto pt-10">
+            <a
+              href="/#contact"
+              tabIndex={isMobileMenuOpen ? 0 : -1}
+              onClick={(e) => handleNavClick(e, '/#contact')}
+              className={buttonClasses({ size: 'lg', className: 'w-full font-bengali' })}
             >
-              আপনার Business নিয়ে কথা বলুন
-            </Button>
-            <div className="text-center mt-6">
-              <p className="text-[10px] text-gray-400 font-medium uppercase tracking-[0.2em] mb-1">Built for Bangladesh Brands</p>
-              <p className="text-[10px] text-gray-500 font-bold">{business.officeAddress} • {business.email}</p>
-            </div>
+              {t('common.ctaTalkBusiness')}
+            </a>
+            <p className="mt-6 text-center text-xs text-muted-text">
+              {business.officeAddress} · {business.email}
+            </p>
           </div>
         </div>
       </div>

@@ -1,51 +1,44 @@
-import { AlertCircle, Ban } from 'lucide-react';
+import { Ban, X } from 'lucide-react';
 import { Section } from '@/components/ui/section';
 import { Container } from '@/components/ui/container';
 
-export function WhoItsNotFor() {
-  const points = [
-    "যারা overnight guaranteed result চান",
-    "যারা প্রয়োজনীয় business information share করতে চান না",
-    "যারা responsibility বা approval process follow করতে চান না",
-    "যারা শুধু lowest-price vendor খুঁজছেন"
-  ];
+const points = [
+  "যারা overnight guaranteed result চান",
+  "যারা প্রয়োজনীয় business information share করতে চান না",
+  "যারা responsibility বা approval process follow করতে চান না",
+  "যারা শুধু lowest-price vendor খুঁজছেন"
+];
 
+export function WhoItsNotFor() {
   return (
-    <Section bg="ivory" className="!pt-0">
+    <Section bg="white" className="!pt-0">
       <Container>
-        <div className="max-w-4xl mx-auto bg-white rounded-[32px] shadow-card border border-sage/50 p-8 md:p-12">
-          <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
-            
-            <div className="md:w-1/3">
-              <div className="inline-flex items-center gap-2 bg-red-50 text-red-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">
-                <Ban className="w-3.5 h-3.5" />
-                Not For Everyone
-              </div>
-              <h2 className="text-2xl md:text-3xl font-serif font-bold text-charcoal mb-4">
-                Nukta সবার জন্য নয়
-              </h2>
-              <p className="text-gray-600 font-bengali text-sm font-medium leading-relaxed">
+        <div className="overflow-hidden rounded-[28px] border border-line bg-bg-warm">
+          <div className="grid lg:grid-cols-[1fr_1.4fr]">
+            <div className="border-b border-line p-8 md:p-10 lg:border-b-0 lg:border-r">
+              <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-rose-600 ring-1 ring-line">
+                <Ban className="h-3.5 w-3.5" aria-hidden="true" />
+                Not for everyone
+              </span>
+              <h2 className="mt-5 text-2xl font-bold tracking-tight md:text-3xl">Nukta সবার জন্য নয়</h2>
+              <p className="mt-4 font-bengali text-[15px] leading-relaxed text-body">
                 Nukta structured execution, transparency এবং long-term business improvement-এ বিশ্বাস করে।
+              </p>
+              <p className="mt-6 border-l-2 border-accent pl-4 font-bengali text-sm leading-relaxed text-muted-text">
+                “সঠিক partnership তৈরি হয় shared commitment, clear communication এবং realistic expectation-এর মাধ্যমে।”
               </p>
             </div>
 
-            <div className="md:w-2/3 grid sm:grid-cols-2 gap-4">
-              {points.map((point, index) => (
-                <div key={index} className="flex items-start gap-3 bg-bg-warm p-4 rounded-[16px]">
-                  <AlertCircle className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-600 font-bengali text-sm font-medium leading-tight">
-                    {point}
-                  </p>
-                </div>
+            <ul className="grid gap-px bg-line sm:grid-cols-2">
+              {points.map((point) => (
+                <li key={point} className="flex items-start gap-3 bg-bg-warm p-6 md:p-8">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white text-muted-text ring-1 ring-line">
+                    <X className="h-3.5 w-3.5" aria-hidden="true" />
+                  </span>
+                  <p className="font-bengali text-[15px] font-medium leading-relaxed text-ink">{point}</p>
+                </li>
               ))}
-            </div>
-
-          </div>
-
-          <div className="mt-8 pt-8 border-t border-sage/30 text-center">
-            <p className="text-gray-600 font-bengali text-sm font-medium max-w-2xl mx-auto">
-              "সঠিক partnership তৈরি হয় shared commitment, clear communication এবং realistic expectation-এর মাধ্যমে।"
-            </p>
+            </ul>
           </div>
         </div>
       </Container>

@@ -1,85 +1,71 @@
-import { PieChart, Info } from 'lucide-react';
+import { Info, Check, ShieldCheck } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { Section } from '@/components/ui/section';
 import { Container } from '@/components/ui/container';
 
-export function ProfitSharing() {
-  const points = [
-    "Founder retains complete brand ownership",
-    "Core product and brand remain the founder's",
-    "Nukta becomes the operational partner",
-    "Nukta grows only when the business grows"
-  ];
+const points = [
+  "Founder retains complete brand ownership",
+  "Core product and brand remain the founder's",
+  "Nukta becomes the operational partner",
+  "Nukta grows only when the business grows"
+];
 
+export function ProfitSharing() {
   return (
-    <Section bg="warm" className="!pb-0">
+    <Section bg="white" id="model">
       <Container>
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto pb-14 md:pb-20">
+        <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <div>
-            <SectionHeading 
-              title="আমাদের model আলাদা কেন?" 
-              className="mb-8 md:mb-10"
-            />
-            <ul className="space-y-4 mb-8">
-              {points.map((point, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></div>
-                  <p className="text-lg text-charcoal/80 font-medium">{point}</p>
+            <SectionHeading eyebrow="Partnership model" title="আমাদের model আলাদা কেন?" className="mb-8 md:mb-10" />
+            <ul className="space-y-4">
+              {points.map((point) => (
+                <li key={point} className="flex items-start gap-3">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-soft text-primary">
+                    <Check className="h-3.5 w-3.5" strokeWidth={3} aria-hidden="true" />
+                  </span>
+                  <p className="text-base font-medium text-ink md:text-lg">{point}</p>
                 </li>
               ))}
             </ul>
-            <div className="bg-sage/40 border border-sage p-4 rounded-xl flex gap-3 text-sm text-charcoal/80 font-bengali">
-              <Info className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-              <p>Profit-sharing structure project, responsibility, investment and agreement অনুযায়ী নির্ধারিত হবে।</p>
+            <div className="mt-8 flex gap-3 rounded-2xl border border-line bg-bg-warm p-4 font-bengali text-sm leading-relaxed text-body">
+              <Info className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+              <p>Profit-sharing structure project, responsibility, investment and agreement অনুযায়ী নির্ধারিত হবে।</p>
             </div>
           </div>
 
-          <div className="relative flex justify-center">
-            {/* Visual Split */}
-            <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full shadow-2xl border-4 border-white overflow-hidden flex">
-              {/* Founder 60% */}
-              <div className="w-[60%] h-full bg-primary flex items-center justify-center relative">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.1),transparent)]"></div>
-                <div className="text-center z-10 text-white">
-                  <div className="text-3xl md:text-4xl font-bold mb-1">60%</div>
-                  <div className="text-xs md:text-sm font-medium tracking-wider uppercase opacity-90">Founder</div>
+          {/* Split visual */}
+          <div className="relative">
+            <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[40px] bg-[radial-gradient(closest-side,rgba(11,107,75,0.12),transparent)] blur-xl" aria-hidden="true" />
+            <div className="rounded-[28px] border border-line bg-white p-7 shadow-elevated md:p-9">
+              <div className="flex items-center justify-between">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-text">Profit-Sharing Model</p>
+                <span className="rounded-full bg-bg-warm px-2.5 py-1 text-[11px] font-medium text-muted-text ring-1 ring-line">Per agreement</span>
+              </div>
+
+              <div className="mt-8 grid grid-cols-[3fr_2fr] gap-6">
+                <div>
+                  <p className="font-display text-5xl font-extrabold tracking-tight text-primary md:text-6xl">60%</p>
+                  <p className="mt-2 text-sm font-medium text-body">Founder&apos;s Profit Share</p>
+                </div>
+                <div>
+                  <p className="font-display text-5xl font-extrabold tracking-tight text-accent md:text-6xl">40%</p>
+                  <p className="mt-2 text-sm font-medium text-body">Nukta&apos;s Growth Fee</p>
                 </div>
               </div>
-              {/* Nukta 40% */}
-              <div className="w-[40%] h-full bg-accent flex items-center justify-center relative">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.1),transparent)]"></div>
-                <div className="text-center z-10 text-white">
-                  <div className="text-2xl md:text-3xl font-bold mb-1">40%</div>
-                  <div className="text-xs md:text-sm font-medium tracking-wider uppercase opacity-90">Nukta</div>
-                </div>
+
+              <div className="mt-8 flex h-3 overflow-hidden rounded-full" role="img" aria-label="60% founder, 40% Nukta">
+                <div className="w-[60%] bg-primary" />
+                <div className="w-[40%] border-l-2 border-white bg-accent" />
               </div>
-            </div>
-            
-            <div className="absolute -bottom-6 bg-white px-6 py-3 rounded-full shadow-lg border border-sage/50 flex items-center gap-3">
-              <PieChart className="w-5 h-5 text-primary" />
-              <span className="font-semibold text-charcoal">Profit-Sharing Model</span>
+
+              <div className="mt-8 flex items-center gap-3 rounded-2xl bg-primary-soft p-4">
+                <ShieldCheck className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+                <p className="text-sm font-semibold text-primary-deep">Founder retains 100% brand ownership</p>
+              </div>
             </div>
           </div>
         </div>
       </Container>
-
-      {/* Bottom Profit Visual Bar */}
-      <div className="h-12 bg-primary-deep flex items-center justify-between px-4 md:px-10 text-white w-full shadow-inner">
-        <div className="flex items-center gap-4 md:gap-8 overflow-hidden">
-          <div className="flex items-center gap-2 whitespace-nowrap">
-            <span className="text-accent font-bold">60%</span>
-            <span className="text-[10px] uppercase font-medium text-white/70">Founder's Profit Share</span>
-          </div>
-          <div className="w-px h-4 bg-white/20 flex-shrink-0"></div>
-          <div className="flex items-center gap-2 whitespace-nowrap">
-            <span className="text-accent font-bold">40%</span>
-            <span className="text-[10px] uppercase font-medium text-white/70">Nukta's Growth Fee</span>
-          </div>
-        </div>
-        <div className="hidden md:block text-[10px] italic text-white/60">
-          Founder retains 100% Brand Ownership
-        </div>
-      </div>
     </Section>
   );
 }

@@ -1,0 +1,307 @@
+{
+  "common": {
+    "ctaTalkShort": "Let's Talk",
+    "ctaTalkBusiness": "Talk to Us About Your Business",
+    "closeModal": "Close modal"
+  },
+  "language": {
+    "label": "Language",
+    "switchTo": "Switch language to {{language}}",
+    "bn": "বাংলা",
+    "en": "English",
+    "bnShort": "বাং",
+    "enShort": "EN"
+  },
+  "header": {
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "products": "Products",
+      "howWeWork": "How We Work",
+      "whyNukta": "Why Nukta",
+      "portfolio": "Portfolio",
+      "careers": "Careers",
+      "contact": "Contact"
+    },
+    "primaryNav": "Primary",
+    "toggleMenu": "Toggle navigation menu",
+    "builtFor": "Built for Bangladesh Brands"
+  },
+  "footer": {
+    "tagline": "One Stop Premium Business Service",
+    "linkedinLabel": "Nukta Technologies on LinkedIn",
+    "facebookLabel": "Nukta Technologies on Facebook",
+    "messengerLabel": "Message Nukta on Messenger",
+    "company": "Company",
+    "aboutNukta": "About Nukta",
+    "howWeWork": "How We Work",
+    "whyNukta": "Why Nukta",
+    "services": "Services",
+    "serviceItems": ["Branding", "Marketing", "Website", "Automation", "Operations"],
+    "explore": "Explore",
+    "portfolio": "Portfolio",
+    "careers": "Careers",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "disclaimer": "Disclaimer"
+  },
+  "hero": {
+    "badge": "One Stop Premium Business Service",
+    "title": "The founder brings the <italic>vision</italic>, <br/><accent>Nukta</accent> runs the operation.",
+    "subtitle": "We run production, branding, marketing, technology, customer support and business operations through one connected system, so founders can focus on growth and decision-making.",
+    "ctaServices": "See Our Services",
+    "trust": ["Strategy", "Manpower", "Technology", "Execution", "Reporting", "Growth"]
+  },
+  "problem": {
+    "title": "Where is your business getting stuck as it grows?",
+    "items": [
+      "Marketing is running, but sales aren't consistent",
+      "There's a team, but no clear system",
+      "Content, design and operations are scattered",
+      "Customer response and follow-up are weak",
+      "The founder is managing everything alone",
+      "There's data, but no actionable reporting"
+    ],
+    "quote": "\"The problem isn't only marketing. Growth is often held back by operations inside the business.\""
+  },
+  "whoItsFor": {
+    "title": "Who is Nukta for?",
+    "subtitle": "Nukta is for founders and brands who want to grow, but whose pace is slowed by scattered execution, team pressure or operational complexity.",
+    "audiences": [
+      { "title": "New Founder", "desc": "You have an idea or product, but no complete execution structure to launch it." },
+      { "title": "Growing Brand", "desc": "Sales are coming in, but marketing, content, team and operations aren't consistent." },
+      { "title": "Overloaded Founder", "desc": "The founder spends a large share of their time solving daily operational problems." },
+      { "title": "Established Business", "desc": "There's an existing team, but it needs a stronger system, automation, reporting and accountability." }
+    ],
+    "cta": "Tell Us Your Business Stage"
+  },
+  "whoItsNotFor": {
+    "badge": "Not For Everyone",
+    "title": "Nukta isn't for everyone",
+    "desc": "Nukta believes in structured execution, transparency and long-term business improvement.",
+    "points": [
+      "Those who want guaranteed overnight results",
+      "Those who won't share necessary business information",
+      "Those who won't follow responsibility or approval processes",
+      "Those who are only looking for the lowest-price vendor"
+    ],
+    "quote": "\"The right partnership is built on shared commitment, clear communication and realistic expectations.\""
+  },
+  "services": {
+    "title": "From Production to Growth, all in one place.",
+    "badge": "Nukta Core Service",
+    "items": [
+      { "title": "Product & Production Support", "desc": "Quality control and production process optimisation." },
+      { "title": "Brand Strategy & Positioning", "desc": "Guidelines for getting the right message to the right audience." },
+      { "title": "Branding & Graphics Design", "desc": "Premium visual identity and professional design." },
+      { "title": "Content Planning & Social Media", "desc": "Engaging content and consistent social media management." },
+      { "title": "Facebook & Google Ads", "desc": "Data-driven, ROI-focused ad campaigns." },
+      { "title": "Website & Landing Page Development", "desc": "Fast, responsive and conversion-optimised web solutions." },
+      { "title": "AI & Business Automation", "desc": "Automated workflows that cut down manual work." },
+      { "title": "Customer Service", "desc": "A fast, professional customer response system." },
+      { "title": "Order Management", "desc": "Smooth tracking from order received to delivery." },
+      { "title": "After-Sales Support", "desc": "Managing the customer experience after delivery." },
+      { "title": "Customer Retention", "desc": "Building a loyal customer base and growing repeat sales." },
+      { "title": "Team & Operational Structure", "desc": "Running operations with the right people and systems." },
+      { "title": "Reporting & Growth Optimisation", "desc": "Actionable data and regular performance reviews." }
+    ]
+  },
+  "products": {
+    "title": "What We Build",
+    "subtitle": "Nukta doesn't just provide services. From the experience of running our own businesses, we build AI-powered software tools.",
+    "statusLabel": "Status: ",
+    "visit": "Visit {{name}}",
+    "status": {
+      "live": "Live",
+      "mvp": "MVP",
+      "inDevelopment": "In development",
+      "internalTool": "Internal tool"
+    },
+    "items": {
+      "smash": "AI tool for planning, generating and managing marketing creatives for businesses.",
+      "tentsaMini": "CRM for managing customer conversations and orders across multiple brands."
+    }
+  },
+  "transformation": {
+    "title": "From Chaos to System. From System to Growth.",
+    "before": "Before",
+    "after": "After Nukta",
+    "beforeList": ["Random tasks", "Late response", "Scattered team", "Weak follow-up", "No reporting", "Founder overload"],
+    "afterList": ["Clear workflow", "Assigned responsibility", "Faster execution", "Automated follow-up", "Central reporting", "Founder focus"],
+    "quote": "\"We don't just deliver services. We build the <highlight>execution system</highlight> inside the business.\""
+  },
+  "howWeWork": {
+    "title": "How We Work",
+    "steps": [
+      { "title": "Business Audit", "desc": "Identify the current situation and problems." },
+      { "title": "Problem & Opportunity Mapping", "desc": "Find where the gaps and opportunities are." },
+      { "title": "Growth & Operational Plan", "desc": "Build a clear roadmap." },
+      { "title": "Team & System Setup", "desc": "Set up the right people and technology." },
+      { "title": "Execution & Monitoring", "desc": "Work to the plan and track progress." },
+      { "title": "Optimisation & Scale", "desc": "Analyse data to grow even further." }
+    ]
+  },
+  "founderRole": {
+    "title": "So what does the founder do?",
+    "quote": "\"The founder's job isn't to manage everything.<br/>The founder's job is to set direction.\"",
+    "founderFocuses": "Founder focuses on:",
+    "nuktaHandles": "Nukta handles:",
+    "founderTasks": ["Vision", "Product", "Major decisions", "Opportunity", "Growth direction"],
+    "nuktaTasks": ["Manpower", "Strategy", "System", "Execution", "Reporting", "Operational follow-up"],
+    "cta": "Reduce Operational Pressure"
+  },
+  "profitSharing": {
+    "title": "Why is our model different?",
+    "points": [
+      "Founder retains complete brand ownership",
+      "Core product and brand remain the founder's",
+      "Nukta becomes the operational partner",
+      "Nukta grows only when the business grows"
+    ],
+    "note": "The profit-sharing structure is set according to the project, responsibilities, investment and agreement.",
+    "founder": "Founder",
+    "nukta": "Nukta",
+    "model": "Profit-Sharing Model",
+    "founderShare": "Founder's Profit Share",
+    "nuktaFee": "Nukta's Growth Fee",
+    "ownership": "Founder retains 100% Brand Ownership"
+  },
+  "accountability": {
+    "title": "How We Ensure Accountability",
+    "subtitle": "Through clear responsibility, defined deadlines, structured reporting and regular review, the progress and outcome of every task stays visible.",
+    "principles": [
+      { "title": "Clear Responsibility", "desc": "Every task has a single, named owner." },
+      { "title": "Defined Deadline", "desc": "When a task will be done is set at the very start." },
+      { "title": "Structured Reporting", "desc": "Progress, blockers and outcomes are reported regularly." },
+      { "title": "Review & Feedback", "desc": "Work is reviewed and corrected or improved as needed." },
+      { "title": "Continuous Improvement", "desc": "Processes are improved so the same mistake doesn't happen twice." }
+    ],
+    "quote": "\"We don't just start the work. We follow through on its responsibility, progress and results.\""
+  },
+  "about": {
+    "title": "About Nukta",
+    "body": "{{legalName}} is a venture studio based in Jashore, Bangladesh, operating since {{since}}. We run our own direct-to-consumer brands and build AI-powered software tools, first for our own operations and then for other businesses in Bangladesh and South Asia.",
+    "founded": "Founded",
+    "location": "Location",
+    "focus": "Focus",
+    "focusValue": "Brand operations + AI software",
+    "registration": "Registration",
+    "tradeLicense": "Trade License No. {{number}}",
+    "founder": "Founder",
+    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  },
+  "whyNukta": {
+    "title": "Why Nukta?",
+    "reasons": [
+      "One operational partner",
+      "Multi-disciplinary team",
+      "AI-enabled workflow",
+      "Data-driven decisions",
+      "Founder-focused execution",
+      "Centralised reporting and accountability"
+    ],
+    "quote": "\"The brand is yours. The backend, execution and operational pressure are ours.\""
+  },
+  "portfolio": {
+    "title": "Proof From Inside Our Work",
+    "viewDetailsFor": "View project details for {{name}}",
+    "viewProject": "View Project",
+    "viewCaseStudy": "View Case Study",
+    "logoAlt": "{{name}} logo",
+    "viewFacebook": "View Facebook Page",
+    "caseStudy": "{{name}} Case Study",
+    "challenge": "Challenge",
+    "approach": "Approach",
+    "results": "Results"
+  },
+  "careers": {
+    "title": "Build brands. Build systems. Grow with Nukta.",
+    "salary": "Salary: {{salary}}",
+    "viewDetails": "View Job Details",
+    "noOpenings": "No Open Positions Currently",
+    "noOpeningsDesc": "We are not actively hiring right now, but we are always looking for great talent. Feel free to drop your CV for future opportunities.",
+    "howToApply": "How to Apply",
+    "emailOnly": "\"CVs are accepted by email only.\"",
+    "responsibilities": "Responsibilities",
+    "requirements": "Requirements",
+    "readyToApply": "Ready to apply? Send your CV to our email.",
+    "applySubject": "Application for {{title}}",
+    "applyNow": "Apply Now"
+  },
+  "leadForm": {
+    "successTitle": "Thank you!",
+    "successDesc": "Your message has been submitted. Our team will get in touch with you very soon.",
+    "sendAnother": "Send Another Message",
+    "errors": {
+      "cooldown": "Please wait a minute before submitting again.",
+      "invalidChars": "Invalid characters detected. Please remove special characters (<, >).",
+      "invalidPhone": "Please enter a valid Bangladeshi mobile number.",
+      "generic": "Please enter a valid Bangladeshi mobile number and try again."
+    },
+    "fields": {
+      "name": "Full Name *",
+      "namePlaceholder": "Your Name",
+      "phone": "Mobile Number *",
+      "email": "Email Address *",
+      "businessName": "Business / Brand Name *",
+      "businessNamePlaceholder": "Your Brand",
+      "category": "Business Category *",
+      "stage": "Current Business Stage *",
+      "sales": "Current Monthly Sales Range",
+      "problem": "Main Operational Problem *",
+      "services": "Services Needed (Select multiple if needed)",
+      "honeypot": "Leave this field blank"
+    },
+    "categories": {
+      "placeholder": "Select Category",
+      "ecommerce": "E-commerce / Retail",
+      "service": "Service Based",
+      "manufacturing": "Manufacturing",
+      "software": "Software / IT",
+      "other": "Other"
+    },
+    "stages": {
+      "placeholder": "Select Stage",
+      "idea": "Idea Stage",
+      "preLaunch": "Pre-launch",
+      "recentlyLaunched": "Recently Launched",
+      "growing": "Growing",
+      "established": "Established",
+      "repositioning": "Repositioning / Relaunching"
+    },
+    "salesRanges": {
+      "placeholder": "Select Range",
+      "under_1l": "Under 1 Lakh",
+      "1l_5l": "1 Lakh - 5 Lakhs",
+      "5l_15l": "5 Lakhs - 15 Lakhs",
+      "15l_plus": "15 Lakhs+"
+    },
+    "problems": {
+      "placeholder": "Select Problem",
+      "inconsistentSales": "Inconsistent Sales",
+      "weakMarketing": "Weak Marketing Execution",
+      "contentPressure": "Content & Design Pressure",
+      "responseDelay": "Customer Response Delay",
+      "orderManagement": "Order Management Problem",
+      "teamCoordination": "Team Coordination Problem",
+      "founderOverload": "Founder Overload",
+      "reportingGap": "Reporting & Accountability Gap",
+      "launchSupport": "Launch Support Needed",
+      "other": "Other"
+    },
+    "serviceOptions": {
+      "branding": "Branding",
+      "marketing": "Marketing",
+      "automation": "Automation",
+      "customerSupport": "Customer Support",
+      "operations": "Operations",
+      "fullSystem": "Full System"
+    },
+    "submitting": "Submitting...",
+    "submit": "Request a Business Consultation",
+    "orEmail": "Or email us directly:"
+  }
+}

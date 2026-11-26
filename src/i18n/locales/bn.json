@@ -1,0 +1,307 @@
+{
+  "common": {
+    "ctaTalkShort": "কথা বলুন",
+    "ctaTalkBusiness": "আপনার Business নিয়ে কথা বলুন",
+    "closeModal": "বন্ধ করুন"
+  },
+  "language": {
+    "label": "ভাষা",
+    "switchTo": "ভাষা পরিবর্তন করুন: {{language}}",
+    "bn": "বাংলা",
+    "en": "English",
+    "bnShort": "বাং",
+    "enShort": "EN"
+  },
+  "header": {
+    "nav": {
+      "home": "হোম",
+      "services": "সার্ভিস",
+      "products": "প্রোডাক্ট",
+      "howWeWork": "কাজের পদ্ধতি",
+      "whyNukta": "কেন Nukta",
+      "portfolio": "পোর্টফোলিও",
+      "careers": "ক্যারিয়ার",
+      "contact": "যোগাযোগ"
+    },
+    "primaryNav": "প্রধান",
+    "toggleMenu": "মেনু খুলুন বা বন্ধ করুন",
+    "builtFor": "Built for Bangladesh Brands"
+  },
+  "footer": {
+    "tagline": "One Stop Premium Business Service",
+    "linkedinLabel": "LinkedIn-এ Nukta Technologies",
+    "facebookLabel": "Facebook-এ Nukta Technologies",
+    "messengerLabel": "Messenger-এ Nukta-কে মেসেজ করুন",
+    "company": "কোম্পানি",
+    "aboutNukta": "Nukta সম্পর্কে",
+    "howWeWork": "কাজের পদ্ধতি",
+    "whyNukta": "কেন Nukta",
+    "services": "সার্ভিস",
+    "serviceItems": ["Branding", "Marketing", "Website", "Automation", "Operations"],
+    "explore": "আরও দেখুন",
+    "portfolio": "পোর্টফোলিও",
+    "careers": "ক্যারিয়ার",
+    "faq": "সাধারণ প্রশ্ন",
+    "contact": "যোগাযোগ",
+    "rights": "সর্বস্বত্ব সংরক্ষিত।",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "disclaimer": "Disclaimer"
+  },
+  "hero": {
+    "badge": "One Stop Premium Business Service",
+    "title": "Founder <italic>vision</italic> দিবে, <br/>operation সামলাবে <accent>Nukta.</accent>",
+    "subtitle": "Production, branding, marketing, technology, customer support এবং business operation—সবকিছু একটি connected system-এর মাধ্যমে পরিচালনা করি, যাতে founder growth এবং decision-making-এ focus করতে পারেন।",
+    "ctaServices": "আমাদের Services দেখুন",
+    "trust": ["Strategy", "Manpower", "Technology", "Execution", "Reporting", "Growth"]
+  },
+  "problem": {
+    "title": "Business grow করতে গিয়ে কোথায় আটকে যাচ্ছেন?",
+    "items": [
+      "Marketing হচ্ছে, কিন্তু sales consistent না",
+      "Team আছে, কিন্তু clear system নেই",
+      "Content, design ও operation scattered",
+      "Customer response ও follow-up দুর্বল",
+      "Founder সবকিছু নিজে manage করছেন",
+      "Data আছে, কিন্তু actionable reporting নেই"
+    ],
+    "quote": "\"সমস্যা শুধু marketing-এ না—অনেক সময় business-এর ভিতরের operation-এই growth আটকে থাকে।\""
+  },
+  "whoItsFor": {
+    "title": "Nukta কার জন্য?",
+    "subtitle": "Nukta সেই founder এবং brand-এর জন্য, যারা business grow করতে চান—but scattered execution, team pressure অথবা operational complexity তাদের গতি কমিয়ে দিচ্ছে।",
+    "audiences": [
+      { "title": "New Founder", "desc": "Idea বা product আছে, কিন্তু launch করার complete execution structure নেই।" },
+      { "title": "Growing Brand", "desc": "Sales হচ্ছে, কিন্তু marketing, content, team এবং operations consistent নয়।" },
+      { "title": "Overloaded Founder", "desc": "Founder নিজের সময়ের বড় অংশ daily operational problem সমাধানে ব্যয় করছেন।" },
+      { "title": "Established Business", "desc": "Existing team আছে, কিন্তু stronger system, automation, reporting এবং accountability প্রয়োজন।" }
+    ],
+    "cta": "আপনার Business Stage জানান"
+  },
+  "whoItsNotFor": {
+    "badge": "Not For Everyone",
+    "title": "Nukta সবার জন্য নয়",
+    "desc": "Nukta structured execution, transparency এবং long-term business improvement-এ বিশ্বাস করে।",
+    "points": [
+      "যারা overnight guaranteed result চান",
+      "যারা প্রয়োজনীয় business information share করতে চান না",
+      "যারা responsibility বা approval process follow করতে চান না",
+      "যারা শুধু lowest-price vendor খুঁজছেন"
+    ],
+    "quote": "\"সঠিক partnership তৈরি হয় shared commitment, clear communication এবং realistic expectation-এর মাধ্যমে।\""
+  },
+  "services": {
+    "title": "Production থেকে Growth—এক জায়গা থেকে।",
+    "badge": "Nukta Core Service",
+    "items": [
+      { "title": "Product & Production Support", "desc": "কোয়ালিটি কন্ট্রোল এবং প্রোডাকশন প্রসেস অপ্টিমাইজেশন।" },
+      { "title": "Brand Strategy & Positioning", "desc": "সঠিক অডিয়েন্সের কাছে সঠিক মেসেজ পৌঁছানোর গাইডলাইন।" },
+      { "title": "Branding & Graphics Design", "desc": "প্রিমিয়াম ভিজ্যুয়াল আইডেন্টিটি ও প্রফেশনাল ডিজাইন।" },
+      { "title": "Content Planning & Social Media", "desc": "এনগেজিং কন্টেন্ট এবং ধারাবাহিক সোশ্যাল মিডিয়া ম্যানেজমেন্ট।" },
+      { "title": "Facebook & Google Ads", "desc": "ডেটা-ড্রিভেন এবং আরওআই (ROI) ফোকাসড অ্যাড ক্যাম্পেইন।" },
+      { "title": "Website & Landing Page Development", "desc": "ফাস্ট, রেস্পন্সিভ এবং কনভার্শন-অপ্টিমাইজড ওয়েব সলিউশন।" },
+      { "title": "AI & Business Automation", "desc": "ম্যানুয়াল কাজ কমিয়ে অটোমেটেড ওয়ার্কফ্লো তৈরি।" },
+      { "title": "Customer Service", "desc": "দ্রুত ও প্রফেশনাল কাস্টমার রেসপন্স সিস্টেম।" },
+      { "title": "Order Management", "desc": "অর্ডার রিসিভ থেকে ডেলিভারি পর্যন্ত স্মুথ ট্র্যাকিং।" },
+      { "title": "After-Sales Support", "desc": "ডেলিভারি পরবর্তী কাস্টমার এক্সপেরিয়েন্স ম্যানেজমেন্ট।" },
+      { "title": "Customer Retention", "desc": "লয়াল কাস্টমার বেস তৈরি ও রিপিট সেলস বৃদ্ধি।" },
+      { "title": "Team & Operational Structure", "desc": "সঠিক লোকবল ও সিস্টেমের মাধ্যমে অপারেশন পরিচালনা।" },
+      { "title": "Reporting & Growth Optimisation", "desc": "অ্যাকশনেবল ডেটা এবং রেগুলার পারফরম্যান্স রিভিউ।" }
+    ]
+  },
+  "products": {
+    "title": "What We Build",
+    "subtitle": "Nukta শুধু service দেয় না—নিজস্ব business চালানোর অভিজ্ঞতা থেকে আমরা AI-powered software tool তৈরি করি।",
+    "statusLabel": "স্ট্যাটাস: ",
+    "visit": "{{name}} দেখুন",
+    "status": {
+      "live": "Live",
+      "mvp": "MVP",
+      "inDevelopment": "In development",
+      "internalTool": "Internal tool"
+    },
+    "items": {
+      "smash": "Business-এর marketing creative plan, generate এবং manage করার AI tool।",
+      "tentsaMini": "একাধিক brand-এর customer conversation এবং order এক জায়গা থেকে manage করার CRM।"
+    }
+  },
+  "transformation": {
+    "title": "Chaos থেকে System. System থেকে Growth.",
+    "before": "Before",
+    "after": "After Nukta",
+    "beforeList": ["Random tasks", "Late response", "Scattered team", "Weak follow-up", "No reporting", "Founder overload"],
+    "afterList": ["Clear workflow", "Assigned responsibility", "Faster execution", "Automated follow-up", "Central reporting", "Founder focus"],
+    "quote": "\"আমরা শুধু service deliver করি না—business-এর ভিতরের <highlight>execution system</highlight> build করি।\""
+  },
+  "howWeWork": {
+    "title": "আমরা কীভাবে কাজ করি",
+    "steps": [
+      { "title": "Business Audit", "desc": "বর্তমান অবস্থা ও সমস্যা চিহ্নিত করা।" },
+      { "title": "Problem & Opportunity Mapping", "desc": "কোথায় গ্যাপ আছে এবং কোথায় সুযোগ আছে তা বের করা।" },
+      { "title": "Growth & Operational Plan", "desc": "একটি ক্লিয়ার রোডম্যাপ তৈরি করা।" },
+      { "title": "Team & System Setup", "desc": "সঠিক লোকবল ও টেকনোলজি সেটআপ করা।" },
+      { "title": "Execution & Monitoring", "desc": "প্ল্যান অনুযায়ী কাজ করা ও ট্রাক করা।" },
+      { "title": "Optimisation & Scale", "desc": "ডেটা এনালাইজ করে গ্রোথ আরও বাড়ানো।" }
+    ]
+  },
+  "founderRole": {
+    "title": "তাহলে Founder কী করবেন?",
+    "quote": "\"Founder-এর কাজ সব manage করা না।<br/>Founder-এর কাজ direction দেওয়া।\"",
+    "founderFocuses": "Founder focuses on:",
+    "nuktaHandles": "Nukta handles:",
+    "founderTasks": ["Vision", "Product", "Major decisions", "Opportunity", "Growth direction"],
+    "nuktaTasks": ["Manpower", "Strategy", "System", "Execution", "Reporting", "Operational follow-up"],
+    "cta": "Operational pressure কমান"
+  },
+  "profitSharing": {
+    "title": "আমাদের model আলাদা কেন?",
+    "points": [
+      "Brand-এর সম্পূর্ণ ownership founder-এর কাছেই থাকে",
+      "Core product এবং brand founder-এরই থাকে",
+      "Nukta হয় operational partner",
+      "Business grow করলেই কেবল Nukta grow করে"
+    ],
+    "note": "Profit-sharing structure project, responsibility, investment and agreement অনুযায়ী নির্ধারিত হবে।",
+    "founder": "Founder",
+    "nukta": "Nukta",
+    "model": "Profit-Sharing Model",
+    "founderShare": "Founder's Profit Share",
+    "nuktaFee": "Nukta's Growth Fee",
+    "ownership": "Founder retains 100% Brand Ownership"
+  },
+  "accountability": {
+    "title": "কাজে Accountability কীভাবে নিশ্চিত করি",
+    "subtitle": "Clear responsibility, defined deadline, structured reporting এবং regular review-এর মাধ্যমে প্রতিটি কাজের progress ও outcome দৃশ্যমান রাখা হয়।",
+    "principles": [
+      { "title": "Clear Responsibility", "desc": "প্রতিটি কাজের একজন নির্দিষ্ট owner থাকে।" },
+      { "title": "Defined Deadline", "desc": "কখন কাজ শেষ হবে—তা শুরুতেই নির্ধারিত থাকে।" },
+      { "title": "Structured Reporting", "desc": "Progress, blocker এবং outcome নিয়মিত report করা হয়।" },
+      { "title": "Review & Feedback", "desc": "কাজ review করে প্রয়োজন অনুযায়ী correction ও improvement করা হয়।" },
+      { "title": "Continuous Improvement", "desc": "একই ভুল যেন বারবার না হয়—সে অনুযায়ী process উন্নত করা হয়।" }
+    ],
+    "quote": "\"আমরা শুধু কাজ শুরু করি না—কাজের দায়িত্ব, অগ্রগতি এবং ফলাফল follow through করি।\""
+  },
+  "about": {
+    "title": "About Nukta",
+    "body": "{{legalName}} যশোর, বাংলাদেশ-ভিত্তিক একটি venture studio, {{since}} থেকে কার্যক্রম পরিচালনা করছে। আমরা নিজস্ব direct-to-consumer brand চালাই এবং AI-powered software tool তৈরি করি—প্রথমে নিজেদের operation-এর জন্য, তারপর বাংলাদেশ ও দক্ষিণ এশিয়ার অন্যান্য business-এর জন্য।",
+    "founded": "প্রতিষ্ঠা",
+    "location": "অবস্থান",
+    "focus": "ফোকাস",
+    "focusValue": "Brand operations + AI software",
+    "registration": "নিবন্ধন",
+    "tradeLicense": "Trade License No. {{number}}",
+    "founder": "প্রতিষ্ঠাতা",
+    "months": ["জানুয়ারি", "ফেব্রুয়ারি", "মার্চ", "এপ্রিল", "মে", "জুন", "জুলাই", "আগস্ট", "সেপ্টেম্বর", "অক্টোবর", "নভেম্বর", "ডিসেম্বর"]
+  },
+  "whyNukta": {
+    "title": "কেন Nukta?",
+    "reasons": [
+      "One operational partner",
+      "Multi-disciplinary team",
+      "AI-enabled workflow",
+      "Data-driven decisions",
+      "Founder-focused execution",
+      "Centralised reporting and accountability"
+    ],
+    "quote": "\"Brand আপনার। Backend, execution ও operational pressure—আমাদের।\""
+  },
+  "portfolio": {
+    "title": "আমাদের কাজের ভিতরের প্রমাণ",
+    "viewDetailsFor": "{{name}}-এর project details দেখুন",
+    "viewProject": "Project দেখুন",
+    "viewCaseStudy": "Case Study দেখুন",
+    "logoAlt": "{{name}} logo",
+    "viewFacebook": "Facebook Page দেখুন",
+    "caseStudy": "{{name}} Case Study",
+    "challenge": "Challenge",
+    "approach": "Approach",
+    "results": "Results"
+  },
+  "careers": {
+    "title": "Build brands. Build systems. Grow with Nukta.",
+    "salary": "বেতন: {{salary}}",
+    "viewDetails": "Job Details দেখুন",
+    "noOpenings": "এই মুহূর্তে কোনো Open Position নেই",
+    "noOpeningsDesc": "এখন আমরা সক্রিয়ভাবে নিয়োগ দিচ্ছি না, তবে ভালো talent-এর খোঁজে আমরা সবসময় আছি। ভবিষ্যতের সুযোগের জন্য আপনার CV পাঠিয়ে রাখতে পারেন।",
+    "howToApply": "অ্যাপ্লাই করার নিয়ম",
+    "emailOnly": "\"CV শুধুমাত্র Email-এ গ্রহণ করা হবে।\"",
+    "responsibilities": "দায়িত্বসমূহ",
+    "requirements": "যোগ্যতা",
+    "readyToApply": "অ্যাপ্লাই করতে প্রস্তুত? আমাদের email-এ আপনার CV পাঠান।",
+    "applySubject": "Application for {{title}}",
+    "applyNow": "এখনই অ্যাপ্লাই করুন"
+  },
+  "leadForm": {
+    "successTitle": "ধন্যবাদ!",
+    "successDesc": "আপনার মেসেজ সফলভাবে জমা হয়েছে। আমাদের টিম খুব শীঘ্রই আপনার সাথে যোগাযোগ করবে।",
+    "sendAnother": "আরেকটি মেসেজ পাঠান",
+    "errors": {
+      "cooldown": "আবার জমা দেওয়ার আগে অনুগ্রহ করে এক মিনিট অপেক্ষা করুন।",
+      "invalidChars": "অগ্রহণযোগ্য character পাওয়া গেছে। অনুগ্রহ করে বিশেষ character (<, >) মুছে দিন।",
+      "invalidPhone": "অনুগ্রহ করে সঠিক বাংলাদেশ মোবাইল নম্বর প্রদান করুন।",
+      "generic": "অনুগ্রহ করে সঠিক বাংলাদেশ মোবাইল নম্বর প্রদান করুন এবং আবার চেষ্টা করুন।"
+    },
+    "fields": {
+      "name": "পূর্ণ নাম *",
+      "namePlaceholder": "আপনার নাম",
+      "phone": "মোবাইল নম্বর *",
+      "email": "Email Address *",
+      "businessName": "Business / Brand-এর নাম *",
+      "businessNamePlaceholder": "আপনার Brand",
+      "category": "Business Category *",
+      "stage": "বর্তমান Business Stage *",
+      "sales": "বর্তমান মাসিক Sales Range",
+      "problem": "প্রধান Operational সমস্যা *",
+      "services": "প্রয়োজনীয় Services (একাধিক select করতে পারেন)",
+      "honeypot": "এই ঘরটি ফাঁকা রাখুন"
+    },
+    "categories": {
+      "placeholder": "Category নির্বাচন করুন",
+      "ecommerce": "E-commerce / Retail",
+      "service": "Service Based",
+      "manufacturing": "Manufacturing",
+      "software": "Software / IT",
+      "other": "অন্যান্য"
+    },
+    "stages": {
+      "placeholder": "Stage নির্বাচন করুন",
+      "idea": "Idea Stage",
+      "preLaunch": "Pre-launch",
+      "recentlyLaunched": "Recently Launched",
+      "growing": "Growing",
+      "established": "Established",
+      "repositioning": "Repositioning / Relaunching"
+    },
+    "salesRanges": {
+      "placeholder": "Range নির্বাচন করুন",
+      "under_1l": "১ লাখের কম",
+      "1l_5l": "১ লাখ - ৫ লাখ",
+      "5l_15l": "৫ লাখ - ১৫ লাখ",
+      "15l_plus": "১৫ লাখ+"
+    },
+    "problems": {
+      "placeholder": "সমস্যা নির্বাচন করুন",
+      "inconsistentSales": "Inconsistent Sales",
+      "weakMarketing": "Weak Marketing Execution",
+      "contentPressure": "Content & Design Pressure",
+      "responseDelay": "Customer Response Delay",
+      "orderManagement": "Order Management Problem",
+      "teamCoordination": "Team Coordination Problem",
+      "founderOverload": "Founder Overload",
+      "reportingGap": "Reporting & Accountability Gap",
+      "launchSupport": "Launch Support Needed",
+      "other": "অন্যান্য"
+    },
+    "serviceOptions": {
+      "branding": "Branding",
+      "marketing": "Marketing",
+      "automation": "Automation",
+      "customerSupport": "Customer Support",
+      "operations": "Operations",
+      "fullSystem": "Full System"
+    },
+    "submitting": "জমা হচ্ছে...",
+    "submit": "Business Consultation-এর অনুরোধ করুন",
+    "orEmail": "অথবা সরাসরি Email করুন:"
+  }
+}
